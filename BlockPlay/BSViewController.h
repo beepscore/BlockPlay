@@ -24,7 +24,7 @@ typedef NSString * (^BSBazBlock)(NSString *);
  This way both the caller object and BSViewController can supply state info to the block code.
 
  @param aBlock of type BSBazBlock.
- @return <#return value description#>
+ @return a string
  */
 - (NSString *)baz:(BSBazBlock)aBlock;
 
