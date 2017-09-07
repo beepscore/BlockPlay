@@ -1,10 +1,15 @@
 # Purpose
-Practice using blocks.
+Practice using Objective C blocks.
 
 # References
 Apple Blocks Programming Topics Getting Started with Blocks
 
 # Results
+
+## Background
+This small project was started in 2013.  
+In 2017 it was updated to work with Xcode 8.3.  
+Initial attempts to update project build settings weren't working, so I expediently created a new repo and pasted code from old one.
 
 ## Blocks can be used instead of delegates.
 
