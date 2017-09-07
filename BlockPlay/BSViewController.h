@@ -10,15 +10,20 @@
 
 @interface BSViewController : UIViewController
 
-// define type BSBazBlock as a block that takes a string argument and returns a string
+/**
+ type BSBazBlock is a block that takes a string argument and returns a string
+ @return a string
+ */
 typedef NSString * (^BSBazBlock)(NSString *);
 
-// baz: takes a block argument of type BSBazBlock.
-// Expose this method for use by other objects.
-// The caller object supplies aBlock, typically the block contains state from the caller.
-// BSBazBlock takes a string argument.
-// Method baz: supplies the string argument to aBlock and runs it.
-// This way both the caller object and BSViewController can supply state info to the block code.
+/**
+ The caller supplies a block. Typically the block contains state from the caller.
+ Method baz supplies the arguments to aBlock and runs it.
+ This way both the caller object and BSViewController can supply state info to the block code.
+
+ @param aBlock of type BSBazBlock.
+ @return <#return value description#>
+ */
 - (NSString *)baz:(BSBazBlock)aBlock;
 
 @end
