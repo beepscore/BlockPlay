@@ -31,7 +31,7 @@
     // Take passed block gizmosBlock, specify local value gizmos as argument, and run it.
     gizmosBlock(gizmos);
 
-    return @"all gizmos are ok";
+    return [NSString stringWithFormat: @"%lu gizmos, all are ok", (unsigned long)gizmos.count];
 }
 
 

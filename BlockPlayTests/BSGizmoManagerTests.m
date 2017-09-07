@@ -41,7 +41,7 @@
     NSString *actual = [[BSGizmoManager sharedInstance] observeGizmos:^(NSArray *gizmos) {
     }];
 
-    XCTAssertTrue([actual isEqualToString:@"all gizmos are ok"]);
+    XCTAssertTrue([actual isEqualToString:@"3 gizmos, all are ok"]);
 }
 
 @end
