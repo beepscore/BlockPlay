@@ -14,6 +14,8 @@
 		DE6F14F11F60DA51003077A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F01F60DA51003077A0 /* Assets.xcassets */; };
 		DE6F14F41F60DA51003077A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F21F60DA51003077A0 /* LaunchScreen.storyboard */; };
 		DEC997601F60E0A900E66A79 /* BSViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */; };
+		DEEB010E1F61C35500739BA9 /* BSGizmoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEB010D1F61C35500739BA9 /* BSGizmoManager.m */; };
+		DEEB01101F61C7A800739BA9 /* BSGizmoManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEB010F1F61C7A800739BA9 /* BSGizmoManagerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		DE6F15001F60DA51003077A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewControllerTests.m; sourceTree = "<group>"; };
 		DED576CF1F60DE2700F8B35E /* BSViewController_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSViewController_Tests.h; sourceTree = "<group>"; };
+		DEEB010C1F61C35500739BA9 /* BSGizmoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGizmoManager.h; sourceTree = "<group>"; };
+		DEEB010D1F61C35500739BA9 /* BSGizmoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGizmoManager.m; sourceTree = "<group>"; };
+		DEEB010F1F61C7A800739BA9 /* BSGizmoManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGizmoManagerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,8 @@
 				DE6F14EA1F60DA51003077A0 /* BSViewController.h */,
 				DED576CF1F60DE2700F8B35E /* BSViewController_Tests.h */,
 				DE6F14EB1F60DA51003077A0 /* BSViewController.m */,
+				DEEB010C1F61C35500739BA9 /* BSGizmoManager.h */,
+				DEEB010D1F61C35500739BA9 /* BSGizmoManager.m */,
 				DE6F14ED1F60DA51003077A0 /* Main.storyboard */,
 				DE6F14F01F60DA51003077A0 /* Assets.xcassets */,
 				DE6F14F21F60DA51003077A0 /* LaunchScreen.storyboard */,
@@ -113,6 +120,7 @@
 			children = (
 				DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */,
 				DE6F15001F60DA51003077A0 /* Info.plist */,
+				DEEB010F1F61C7A800739BA9 /* BSGizmoManagerTests.m */,
 			);
 			path = BlockPlayTests;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			files = (
 				DE6F14EC1F60DA51003077A0 /* BSViewController.m in Sources */,
 				DE6F14E91F60DA51003077A0 /* AppDelegate.m in Sources */,
+				DEEB010E1F61C35500739BA9 /* BSGizmoManager.m in Sources */,
 				DE6F14E61F60DA51003077A0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC997601F60E0A900E66A79 /* BSViewControllerTests.m in Sources */,
+				DEEB01101F61C7A800739BA9 /* BSGizmoManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
