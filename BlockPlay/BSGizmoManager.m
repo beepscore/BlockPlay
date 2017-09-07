@@ -29,9 +29,11 @@
     NSArray *gizmos = @[@"Mary", @"Bill", @"George"];
 
     // Take passed block gizmosBlock, specify local value gizmos as argument, and run it.
-    gizmosBlock(gizmos);
+    NSString *gizmosBlockResult = gizmosBlock(gizmos);
 
-    return [NSString stringWithFormat: @"%lu gizmos, all are ok", (unsigned long)gizmos.count];
+    return [NSString stringWithFormat: @"%@, %lu gizmos, all are ok",
+            gizmosBlockResult,
+            (unsigned long)gizmos.count];
 }
 
 

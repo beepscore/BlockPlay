@@ -12,8 +12,9 @@
 
 /**
  type BSGizmosBlock is a block that takes an array
+ @return a string
  */
-typedef void (^BSGizmosBlock)(NSArray *);
+typedef NSString* (^BSGizmosBlock)(NSArray *);
 
 + (BSGizmoManager *)sharedInstance;
 

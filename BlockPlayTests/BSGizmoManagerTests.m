@@ -36,12 +36,25 @@
                    @"expected sharedInstance returns same instance");
 }
 
+// test a gizmosBlock by itself, not as an argument to observeGizmos
+- (void)testGizmosBlock {
+    NSString *testString =  @"hi from gizmosBlock";
+
+    BSGizmosBlock gizmosBlock = ^(NSArray *gizmos) {
+        return testString;
+    };
+
+    NSString *actual = gizmosBlock(@[]);
+    XCTAssertTrue([actual isEqualToString: testString]);
+}
+
 - (void)testObserveGizmos {
 
     NSString *actual = [[BSGizmoManager sharedInstance] observeGizmos:^(NSArray *gizmos) {
+        return @"ran gizmosBlock";
     }];
 
-    XCTAssertTrue([actual isEqualToString:@"3 gizmos, all are ok"]);
+    XCTAssertTrue([actual isEqualToString:@"ran gizmosBlock, 3 gizmos, all are ok"]);
 }
 
 @end
