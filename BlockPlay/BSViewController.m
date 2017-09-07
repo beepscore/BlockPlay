@@ -40,6 +40,8 @@
 }
 
 - (IBAction)buttonTapped:(id)sender {
+    
+    // call foo with a block that takes no arguments and doesn't return anything
     [self foo:^(void){
         NSLog(@"Hi from block. sender %@", sender);
     }];
