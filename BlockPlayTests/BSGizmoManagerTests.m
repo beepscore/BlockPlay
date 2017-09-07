@@ -36,4 +36,12 @@
                    @"expected sharedInstance returns same instance");
 }
 
+- (void)testObserveGizmos {
+
+    NSString *actual = [[BSGizmoManager sharedInstance] observeGizmos:^(NSArray *gizmos) {
+    }];
+
+    XCTAssertTrue([actual isEqualToString:@"all gizmos are ok"]);
+}
+
 @end
