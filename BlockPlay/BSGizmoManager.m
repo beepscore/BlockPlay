@@ -24,8 +24,8 @@
 
 - (NSString *)observeGizmos:(BSGizmosBlock)gizmosBlock {
 
-    // for simple prototype, don't create a Gizmo class.
-    // hardcode an array literal of type NSString
+    // for simple prototype, don't create a Gizmo class for array elements.
+    // instead use elements of type NSString
     NSArray *gizmos = @[@"Mary", @"Bill", @"George"];
 
     // Take passed block gizmosBlock, specify local value gizmos as argument, and run it.
