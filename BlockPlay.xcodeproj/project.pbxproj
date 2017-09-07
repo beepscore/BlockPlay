@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		DE0FF8801F60DB4B00F01763 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DE33DA1D1F60DBA600476D8A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE6F14E11F60DA51003077A0 /* BlockPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6F14E51F60DA51003077A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE6F14E71F60DA51003077A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		DE6F14D81F60DA51003077A0 = {
 			isa = PBXGroup;
 			children = (
+				DE33DA1D1F60DBA600476D8A /* LICENSE */,
 				DE0FF8801F60DB4B00F01763 /* README.md */,
 				DE6F14E31F60DA51003077A0 /* BlockPlay */,
 				DE6F14FD1F60DA51003077A0 /* BlockPlayTests */,
