@@ -125,4 +125,25 @@
                                @"Expected %f but got %f", expectedResult, actualResult);
 }
 
+- (void)testViewDidLoadSetsGizmoManager {
+    // https://developer.apple.com/documentation/foundation/nsbundle?language=objc
+    NSBundle *bundle = [NSBundle bundleForClass:[BSViewController class]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: bundle];
+    BSViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"BSViewController"];
+
+    XCTAssertNil(viewController.gizmoManager);
+
+    // call view to trigger viewDidLoad()
+    // https://stackoverflow.com/questions/28733016/view-controller-tdd
+    UIView *unusedDontCare = viewController.view;
+
+    XCTAssertNotNil(viewController.gizmoManager);
+
+    // XCTAssertEqual is the identical object
+    // XCTAssertEqualObjects tests objectA isEqual:objectB
+    XCTAssertEqual([BSGizmoManager sharedInstance],
+                   viewController.gizmoManager,
+                   @"expected sharedInstance returns same instance");
+}
+
 @end
