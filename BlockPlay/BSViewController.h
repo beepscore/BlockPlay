@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSGizmoManager.h"
+
 
 @interface BSViewController : UIViewController
 
@@ -25,6 +27,8 @@ typedef NSString * (^BSBazBlock)(NSString *);
  @return <#return value description#>
  */
 - (NSString *)baz:(BSBazBlock)aBlock;
+
+@property (nonatomic, strong) BSGizmoManager *gizmoManager;
 
 @end
 
