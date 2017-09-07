@@ -13,7 +13,6 @@
 		DE6F14EF1F60DA51003077A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14ED1F60DA51003077A0 /* Main.storyboard */; };
 		DE6F14F11F60DA51003077A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F01F60DA51003077A0 /* Assets.xcassets */; };
 		DE6F14F41F60DA51003077A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F21F60DA51003077A0 /* LaunchScreen.storyboard */; };
-		DE6F14FF1F60DA51003077A0 /* BlockPlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6F14FE1F60DA51003077A0 /* BlockPlayTests.m */; };
 		DEC997601F60E0A900E66A79 /* BSViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		DE6F14F31F60DA51003077A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE6F14F51F60DA51003077A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE6F14FA1F60DA51003077A0 /* BlockPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE6F14FE1F60DA51003077A0 /* BlockPlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockPlayTests.m; sourceTree = "<group>"; };
 		DE6F15001F60DA51003077A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewControllerTests.m; sourceTree = "<group>"; };
 		DED576CF1F60DE2700F8B35E /* BSViewController_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSViewController_Tests.h; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		DE6F14FD1F60DA51003077A0 /* BlockPlayTests */ = {
 			isa = PBXGroup;
 			children = (
-				DE6F14FE1F60DA51003077A0 /* BlockPlayTests.m */,
 				DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */,
 				DE6F15001F60DA51003077A0 /* Info.plist */,
 			);
@@ -234,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6F14FF1F60DA51003077A0 /* BlockPlayTests.m in Sources */,
 				DEC997601F60E0A900E66A79 /* BSViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
