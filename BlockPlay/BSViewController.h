@@ -12,6 +12,10 @@
 
 @interface BSViewController : UIViewController
 
+@property (nonatomic, strong) BSGizmoManager *gizmoManager;
+
+@property (weak, nonatomic) IBOutlet UILabel *gizmosCountLabel;
+
 /**
  type BSBazBlock is a block that takes a string argument and returns a string
  @return a string
@@ -27,8 +31,6 @@ typedef NSString * (^BSBazBlock)(NSString *);
  @return a string
  */
 - (NSString *)baz:(BSBazBlock)aBlock;
-
-@property (nonatomic, strong) BSGizmoManager *gizmoManager;
 
 @end
 
