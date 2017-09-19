@@ -45,18 +45,22 @@
 
     XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 0);
 
-    // use __block so gizmosBlock can change gizmo1
-    __block NSString *gizmo1 = @"";
+    // expectation example in Objective C
+    // https://www.bignerdranch.com/blog/asynchronous-testing-with-xcode-6/
+    // Might be simpler to write this in Swift!
+    XCTestExpectation *expectation = [self expectationWithDescription:@"gizmos"];
 
     [[BSGizmoManager sharedInstance] observeGizmos:^(NSArray *gizmos) {
-        gizmo1 = gizmos[1];
+        XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 3);
+        XCTAssertTrue([gizmos[1] isEqualToString:@"Bill"]);
+        [expectation fulfill];
     }];
 
-    // TODO: could create an expectation and wait for it to fulfill.
-    // Might be simpler to write this in Swift!
-    // XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 3);
-
-    //XCTAssertTrue([gizmo1 isEqualToString:@"Bill"]);
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
 
     // clean up
     [BSGizmoManager sharedInstance].gizmos = @[];
