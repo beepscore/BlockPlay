@@ -81,7 +81,7 @@
         [self doSomethingWithGizmos:gizmos];
         //[weakSelf doSomethingWithGizmos:gizmos];
 
-        return @"ran BSVieController gizmosBlock";
+        return @"ran BSViewController gizmosBlock";
     }];
 }
 
