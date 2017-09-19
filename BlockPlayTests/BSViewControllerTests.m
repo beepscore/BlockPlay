@@ -136,6 +136,7 @@
     // call view to trigger viewDidLoad()
     // https://stackoverflow.com/questions/28733016/view-controller-tdd
     UIView *unusedDontCare = viewController.view;
+    NSLog(@"log %@ to silence unused variable warning", unusedDontCare);
 
     XCTAssertNotNil(viewController.gizmoManager);
 
