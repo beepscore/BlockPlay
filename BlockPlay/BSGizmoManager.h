@@ -12,9 +12,8 @@
 
 /**
  type BSGizmosBlock is a block that takes an array
- @return a string
  */
-typedef NSString* (^BSGizmosBlock)(NSArray *);
+typedef void (^BSGizmosBlock)(NSArray *);
 
 // for simple prototype, don't create a Gizmo class for array elements.
 // instead use elements of type NSString

@@ -41,27 +41,20 @@
     XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 0);
 }
 
-// test a gizmosBlock by itself, not as an argument to observeGizmos
-- (void)testGizmosBlock {
-    NSString *testString =  @"hi from gizmosBlock";
-
-    BSGizmosBlock gizmosBlock = ^(NSArray *gizmos) {
-        return testString;
-    };
-
-    NSString *actual = gizmosBlock(@[]);
-    XCTAssertTrue([actual isEqualToString: testString]);
-}
-
 - (void)testObserveGizmos {
 
     XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 0);
 
+    // use __block so gizmosBlock can change gizmo1
+    __block NSString *gizmo1 = @"";
+
     [[BSGizmoManager sharedInstance] observeGizmos:^(NSArray *gizmos) {
-        return @"returned from gizmosBlock";
+        gizmo1 = gizmos[1];
     }];
 
     XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 3);
+
+    XCTAssertTrue([gizmo1 isEqualToString:@"Bill"]);
 
     // clean up
     [BSGizmoManager sharedInstance].gizmos = @[];

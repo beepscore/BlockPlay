@@ -35,8 +35,7 @@
     self.gizmos = @[@"Mary", @"Bill", @"George"];
 
     // Take passed block gizmosBlock, specify local value gizmos as argument, and run it.
-    NSString *gizmosBlockResult = gizmosBlock(self.gizmos);
-    NSLog(@"log to silence unused variable warning, %@", gizmosBlockResult);
+    gizmosBlock(self.gizmos);
 }
 
 

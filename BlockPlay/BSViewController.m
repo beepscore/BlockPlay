@@ -80,8 +80,6 @@
         // block captures self (self is the viewController not the gizmoManager)
         [self doSomethingWithGizmos:gizmos];
         //[weakSelf doSomethingWithGizmos:gizmos];
-
-        return @"ran BSViewController gizmosBlock";
     }];
 }
 
