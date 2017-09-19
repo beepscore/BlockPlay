@@ -1,5 +1,5 @@
 # Purpose
-Practice using Objective C blocks.
+Practice using Objective C blocks, GCD dispatch queues, XCTestExpectation.
 
 # References
 Apple Blocks Programming Topics Getting Started with Blocks
