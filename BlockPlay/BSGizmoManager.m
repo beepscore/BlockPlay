@@ -22,18 +22,21 @@
     return sharedInstance;
 }
 
-- (NSString *)observeGizmos:(BSGizmosBlock)gizmosBlock {
+// designated initializer
+- (instancetype)init {
+    if(self = [super init]) {
+        self.gizmos = @[];
+    }
+    return self;
+}
 
-    // for simple prototype, don't create a Gizmo class for array elements.
-    // instead use elements of type NSString
-    NSArray *gizmos = @[@"Mary", @"Bill", @"George"];
+- (void)observeGizmos:(BSGizmosBlock)gizmosBlock {
+
+    self.gizmos = @[@"Mary", @"Bill", @"George"];
 
     // Take passed block gizmosBlock, specify local value gizmos as argument, and run it.
-    NSString *gizmosBlockResult = gizmosBlock(gizmos);
-
-    return [NSString stringWithFormat: @"%@, %lu gizmos, all are ok",
-            gizmosBlockResult,
-            (unsigned long)gizmos.count];
+    NSString *gizmosBlockResult = gizmosBlock(self.gizmos);
+    NSLog(@"log to silence unused variable warning, %@", gizmosBlockResult);
 }
 
 

@@ -75,7 +75,7 @@
     // TODO: consider use weakSelf inside block
     // __weak typeof(self)weakSelf = self;
 
-    NSString *unusedDontCare = [self.gizmoManager observeGizmos:^(NSArray *gizmos) {
+    [self.gizmoManager observeGizmos:^(NSArray *gizmos) {
 
         // block captures self (self is the viewController not the gizmoManager)
         [self doSomethingWithGizmos:gizmos];
