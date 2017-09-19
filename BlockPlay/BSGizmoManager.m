@@ -32,10 +32,24 @@
 
 - (void)observeGizmos:(BSGizmosBlock)gizmosBlock {
 
-    self.gizmos = @[@"Mary", @"Bill", @"George"];
+    // https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW1
+    // https://stackoverflow.com/questions/12693197/dispatch-get-global-queue-vs-dispatch-get-main-queue#12693409
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
-    // Take passed block gizmosBlock, specify local value gizmos as argument, and run it.
-    gizmosBlock(self.gizmos);
+    // dispatch task asynchronously so it won't block caller
+    dispatch_async(globalQueue, ^{
+
+        // for prototype, use fake gizmos
+        self.gizmos = @[@"Mary", @"Bill", @"George"];
+
+        // use main queue to run gizmosBlock. Then it can safely update UI
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        dispatch_async(mainQueue, ^{
+            // Take passed block gizmosBlock, specify local value gizmos as argument, and run it.
+            gizmosBlock(self.gizmos);
+        });
+
+    });
 }
 
 

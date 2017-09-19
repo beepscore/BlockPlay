@@ -22,15 +22,15 @@ typedef void (^BSGizmosBlock)(NSArray *);
 + (BSGizmoManager *)sharedInstance;
 
 /**
- The caller supplies gizmosBlock. Typically the block contains state from the caller.
- Method observeGizmos supplies the arguments to gizmosBlock and runs it.
- This way both the caller object and BSGizmoManager can control the block.
+ Method runs asynchronously on a background queue.
+ In production, observeGizmos might talk with physical gizmos, e.g. to get their names and status.
+ This might be relatively slow, so we don't want to block caller while observing gizmos.
 
- In production, method might talk with physical gizmos, e.g. to get their names and status.
- This might be relatively slow, so we don't want to block UI while observing gizmos.
- Instead we can run gizmosBlock as a completion block.
+ After it gets gizmos status, it gets main queue,
+ supplies arguments to gizmosBlock and runs gizmosBlock as a completion block.
+ Then gizmosBlock can safely update UI.
 
- @param gizmosBlock of type BSGizmosBlock.
+ @param gizmosBlock of type BSGizmosBlock. Typically the block contains state from the caller.
  */
 - (void)observeGizmos:(BSGizmosBlock)gizmosBlock;
 
