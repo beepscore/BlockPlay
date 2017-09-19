@@ -38,7 +38,7 @@
 
 - (void)testSharedInstanceGizmosEmpty {
     self.gizmoManager = [BSGizmoManager sharedInstance];
-    // XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 0);
+    XCTAssertEqual([BSGizmoManager sharedInstance].gizmos.count, 0);
 }
 
 - (void)testObserveGizmos {
