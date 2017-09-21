@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Gizmos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="BSViewController" id="BYZ-38-t0r" customClass="BSViewController" sceneMemberID="viewController">
@@ -73,7 +73,7 @@
                             <constraint firstItem="zDD-Ix-tZO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xUC-2a-P4B" secondAttribute="trailing" constant="8" symbolic="YES" id="ycy-Zi-3Bo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="I3w-fw-Id9"/>
+                    <tabBarItem key="tabBarItem" title="Gizmos" id="I3w-fw-Id9"/>
                     <connections>
                         <outlet property="gizmosCountLabel" destination="zDD-Ix-tZO" id="dbl-UZ-KHU"/>
                     </connections>
@@ -81,6 +81,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="480.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="CEh-SD-Xct">
+            <objects>
+                <viewController id="9Yx-If-TtX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7A0-tX-Br5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vz9-xO-EUV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sF0-zw-g8A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="MpJ-8P-kgE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqU-6R-S4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="481" y="855"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AGQ-Hu-qU3">
@@ -93,6 +112,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="A7G-MP-oPH"/>
+                        <segue destination="9Yx-If-TtX" kind="relationship" relationship="viewControllers" id="lQS-8w-sr3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9aU-T7-X1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
