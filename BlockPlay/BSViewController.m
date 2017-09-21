@@ -62,7 +62,7 @@
  * Questioner: Nope.
  * Execution deadlocks on dispatch_sync.
  *
- * can see this in Xcode, tap logButton, app stops with message:
+ * can see this in Xcode, tap logButton, app logs 1, 5, 2, then stops with message:
  * Thread 5: EXC_BAD_INSTRUCTION(code=EXC_I386_INVOP,subcode=0x0)
  * call stack Thread 5 0_dispatch_sync_wait detail shows
  * "BUG IN CLIENT OF LIBDISPATCH: dispatch_sync called on queue already owned by current thread"
