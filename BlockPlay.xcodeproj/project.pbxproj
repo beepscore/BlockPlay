@@ -13,6 +13,7 @@
 		DE6F14EF1F60DA51003077A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14ED1F60DA51003077A0 /* Main.storyboard */; };
 		DE6F14F11F60DA51003077A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F01F60DA51003077A0 /* Assets.xcassets */; };
 		DE6F14F41F60DA51003077A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F21F60DA51003077A0 /* LaunchScreen.storyboard */; };
+		DEB19AD71F73900400B248FA /* BSOtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB19AD61F73900400B248FA /* BSOtherVC.m */; };
 		DEC997601F60E0A900E66A79 /* BSViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */; };
 		DEEB010E1F61C35500739BA9 /* BSGizmoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEB010D1F61C35500739BA9 /* BSGizmoManager.m */; };
 		DEEB01101F61C7A800739BA9 /* BSGizmoManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEB010F1F61C7A800739BA9 /* BSGizmoManagerTests.m */; };
@@ -43,6 +44,8 @@
 		DE6F14F51F60DA51003077A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE6F14FA1F60DA51003077A0 /* BlockPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6F15001F60DA51003077A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB19AD51F73900400B248FA /* BSOtherVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSOtherVC.h; sourceTree = "<group>"; };
+		DEB19AD61F73900400B248FA /* BSOtherVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSOtherVC.m; sourceTree = "<group>"; };
 		DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewControllerTests.m; sourceTree = "<group>"; };
 		DED576CF1F60DE2700F8B35E /* BSViewController_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSViewController_Tests.h; sourceTree = "<group>"; };
 		DEEB010C1F61C35500739BA9 /* BSGizmoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGizmoManager.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				DE6F14E81F60DA51003077A0 /* AppDelegate.m */,
 				DEEB010C1F61C35500739BA9 /* BSGizmoManager.h */,
 				DEEB010D1F61C35500739BA9 /* BSGizmoManager.m */,
+				DEB19AD51F73900400B248FA /* BSOtherVC.h */,
+				DEB19AD61F73900400B248FA /* BSOtherVC.m */,
 				DE6F14EA1F60DA51003077A0 /* BSViewController.h */,
 				DED576CF1F60DE2700F8B35E /* BSViewController_Tests.h */,
 				DE6F14EB1F60DA51003077A0 /* BSViewController.m */,
@@ -231,6 +236,7 @@
 			files = (
 				DE6F14EC1F60DA51003077A0 /* BSViewController.m in Sources */,
 				DE6F14E91F60DA51003077A0 /* AppDelegate.m in Sources */,
+				DEB19AD71F73900400B248FA /* BSOtherVC.m in Sources */,
 				DEEB010E1F61C35500739BA9 /* BSGizmoManager.m in Sources */,
 				DE6F14E61F60DA51003077A0 /* main.m in Sources */,
 			);
