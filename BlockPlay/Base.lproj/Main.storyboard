@@ -20,7 +20,20 @@
                     <view key="view" contentMode="scaleToFill" id="of9-2P-RrX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqh-ct-xRf">
+                                <rect key="frame" x="128.5" y="318" width="117" height="30"/>
+                                <state key="normal" title="Navigate To Next"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fjz-gG-yL3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uqh-ct-xRf" firstAttribute="centerX" secondItem="of9-2P-RrX" secondAttribute="centerX" id="2SY-8X-Tgy"/>
+                            <constraint firstItem="uqh-ct-xRf" firstAttribute="centerY" secondItem="of9-2P-RrX" secondAttribute="centerY" id="Ftp-q1-7dh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYr-xe-eOa"/>
                 </viewController>
@@ -57,13 +70,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDD-Ix-tZO">
-                                <rect key="frame" x="268" y="120" width="11" height="29"/>
+                                <rect key="frame" x="268" y="164" width="11" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gizmos count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-2a-P4B">
-                                <rect key="frame" x="96" y="120" width="146" height="29"/>
+                                <rect key="frame" x="96" y="164" width="146" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
