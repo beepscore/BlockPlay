@@ -138,4 +138,8 @@
                                       (unsigned long)gizmos.count];
 }
 
+- (void)dealloc {
+    NSLog(@"BSViewController dealloc");
+}
+
 @end
