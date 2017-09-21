@@ -62,26 +62,40 @@
  * Questioner: Nope.
  * Execution deadlocks on dispatch_sync.
  *
- * can see this in Xcode, tap logButton, app logs 1, 5, 2, then stops with message:
- * Thread 5: EXC_BAD_INSTRUCTION(code=EXC_I386_INVOP,subcode=0x0)
- * call stack Thread 5 0_dispatch_sync_wait detail shows
- * "BUG IN CLIENT OF LIBDISPATCH: dispatch_sync called on queue already owned by current thread"
  *
  @param sender object that called the method
  */
 - (IBAction)logButtonTapped:(id)sender {
 
-    // serial queue, items will be started in the order they were added, but can finish in any order
+    // Serial queue
+    // Both serial and concurrent queues are FIFO, start executing tasks in the order they were added to the queue.
+    // Serial queue has only one thread, executes one task at a time.
+    // In contrast, a concurrent queue starts tasks in queue order but they can finish in a different order.
     dispatch_queue_t q = dispatch_queue_create("queue", DISPATCH_QUEUE_SERIAL);
 
     NSLog(@"1");
+
+    // dispatch_async returns control immediately.
+    // It schedules task "2" to be done but doesn't wait for it
     dispatch_async(q, ^{
-            NSLog(@"2");
-            dispatch_sync(q, ^{
-                    NSLog(@"3");
-                    });
-            NSLog(@"4");
-            });
+        NSLog(@"2");
+
+        // Ray Wenderlich tutorial "Never dispatch sync onto current queue, this will deadlock"
+        // https://stackoverflow.com/questions/15381209/how-do-i-create-a-deadlock-in-grand-central-dispatch
+        // https://stackoverflow.com/questions/19179358/concurrent-vs-serial-queues-in-gcd
+        // dispatch_sync suspends execution of task "2" until task "3" completes
+        // but serial queue won't start task 3 until 2 finishes
+        // ==> deadlock
+
+        // can see this in Xcode, tap logButton, app logs 1, 5, 2, then stops on dispatch_sync with message:
+        // Thread 5: EXC_BAD_INSTRUCTION(code=EXC_I386_INVOP,subcode=0x0)
+        // In call stack Thread 5 top line 0_dispatch_sync_wait, click to see detail:
+        // "BUG IN CLIENT OF LIBDISPATCH: dispatch_sync called on queue already owned by current thread"
+        dispatch_sync(q, ^{
+            NSLog(@"3");
+        });
+        NSLog(@"4");
+    });
     NSLog(@"5");
 }
 
