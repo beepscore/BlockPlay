@@ -85,7 +85,7 @@
         <!--Item-->
         <scene sceneID="CEh-SD-Xct">
             <objects>
-                <viewController id="9Yx-If-TtX" sceneMemberID="viewController">
+                <viewController id="9Yx-If-TtX" customClass="BSOtherVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7A0-tX-Br5"/>
                         <viewControllerLayoutGuide type="bottom" id="Vz9-xO-EUV"/>
@@ -107,6 +107,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fnG-tU-1bR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PPr-oy-6Dd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
