@@ -14,6 +14,7 @@
 		DE6F14F11F60DA51003077A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F01F60DA51003077A0 /* Assets.xcassets */; };
 		DE6F14F41F60DA51003077A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6F14F21F60DA51003077A0 /* LaunchScreen.storyboard */; };
 		DE8AE1721F739603001B381B /* BSOtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8AE1711F739603001B381B /* BSOtherVC.m */; };
+		DEBA0B251F73A0CF003EAE5E /* BlockPlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA0B241F73A0CF003EAE5E /* BlockPlayUITests.swift */; };
 		DEC997601F60E0A900E66A79 /* BSViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */; };
 		DEEB010E1F61C35500739BA9 /* BSGizmoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEB010D1F61C35500739BA9 /* BSGizmoManager.m */; };
 		DEEB01101F61C7A800739BA9 /* BSGizmoManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEB010F1F61C7A800739BA9 /* BSGizmoManagerTests.m */; };
@@ -21,6 +22,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		DE6F14FB1F60DA51003077A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE6F14D91F60DA51003077A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE6F14E01F60DA51003077A0;
+			remoteInfo = BlockPlay;
+		};
+		DEBA0B271F73A0CF003EAE5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE6F14D91F60DA51003077A0 /* Project object */;
 			proxyType = 1;
@@ -46,6 +54,9 @@
 		DE6F15001F60DA51003077A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8AE1701F739603001B381B /* BSOtherVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSOtherVC.h; sourceTree = "<group>"; };
 		DE8AE1711F739603001B381B /* BSOtherVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSOtherVC.m; sourceTree = "<group>"; };
+		DEBA0B221F73A0CF003EAE5E /* BlockPlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockPlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBA0B241F73A0CF003EAE5E /* BlockPlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockPlayUITests.swift; sourceTree = "<group>"; };
+		DEBA0B261F73A0CF003EAE5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC9975F1F60E0A900E66A79 /* BSViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewControllerTests.m; sourceTree = "<group>"; };
 		DED576CF1F60DE2700F8B35E /* BSViewController_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSViewController_Tests.h; sourceTree = "<group>"; };
 		DEEB010C1F61C35500739BA9 /* BSGizmoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGizmoManager.h; sourceTree = "<group>"; };
@@ -68,6 +79,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEBA0B1F1F73A0CF003EAE5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +96,7 @@
 				DE0FF8801F60DB4B00F01763 /* README.md */,
 				DE6F14E31F60DA51003077A0 /* BlockPlay */,
 				DE6F14FD1F60DA51003077A0 /* BlockPlayTests */,
+				DEBA0B231F73A0CF003EAE5E /* BlockPlayUITests */,
 				DE6F14E21F60DA51003077A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +106,7 @@
 			children = (
 				DE6F14E11F60DA51003077A0 /* BlockPlay.app */,
 				DE6F14FA1F60DA51003077A0 /* BlockPlayTests.xctest */,
+				DEBA0B221F73A0CF003EAE5E /* BlockPlayUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +150,15 @@
 			path = BlockPlayTests;
 			sourceTree = "<group>";
 		};
+		DEBA0B231F73A0CF003EAE5E /* BlockPlayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DEBA0B241F73A0CF003EAE5E /* BlockPlayUITests.swift */,
+				DEBA0B261F73A0CF003EAE5E /* Info.plist */,
+			);
+			path = BlockPlayUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,12 +197,31 @@
 			productReference = DE6F14FA1F60DA51003077A0 /* BlockPlayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DEBA0B211F73A0CF003EAE5E /* BlockPlayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEBA0B2B1F73A0CF003EAE5E /* Build configuration list for PBXNativeTarget "BlockPlayUITests" */;
+			buildPhases = (
+				DEBA0B1E1F73A0CF003EAE5E /* Sources */,
+				DEBA0B1F1F73A0CF003EAE5E /* Frameworks */,
+				DEBA0B201F73A0CF003EAE5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEBA0B281F73A0CF003EAE5E /* PBXTargetDependency */,
+			);
+			name = BlockPlayUITests;
+			productName = BlockPlayUITests;
+			productReference = DEBA0B221F73A0CF003EAE5E /* BlockPlayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		DE6F14D91F60DA51003077A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Beepscore LLC";
 				TargetAttributes = {
@@ -184,6 +232,12 @@
 					};
 					DE6F14F91F60DA51003077A0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = J2LXK9FK3W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE6F14E01F60DA51003077A0;
+					};
+					DEBA0B211F73A0CF003EAE5E = {
+						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = J2LXK9FK3W;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DE6F14E01F60DA51003077A0;
@@ -205,6 +259,7 @@
 			targets = (
 				DE6F14E01F60DA51003077A0 /* BlockPlay */,
 				DE6F14F91F60DA51003077A0 /* BlockPlayTests */,
+				DEBA0B211F73A0CF003EAE5E /* BlockPlayUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +276,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE6F14F81F60DA51003077A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBA0B201F73A0CF003EAE5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,6 +313,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEBA0B1E1F73A0CF003EAE5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBA0B251F73A0CF003EAE5E /* BlockPlayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -258,6 +328,11 @@
 			isa = PBXTargetDependency;
 			target = DE6F14E01F60DA51003077A0 /* BlockPlay */;
 			targetProxy = DE6F14FB1F60DA51003077A0 /* PBXContainerItemProxy */;
+		};
+		DEBA0B281F73A0CF003EAE5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE6F14E01F60DA51003077A0 /* BlockPlay */;
+			targetProxy = DEBA0B271F73A0CF003EAE5E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,6 +510,47 @@
 			};
 			name = Release;
 		};
+		DEBA0B291F73A0CF003EAE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2LXK9FK3W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BlockPlayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beepscore.BlockPlayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlockPlay;
+			};
+			name = Debug;
+		};
+		DEBA0B2A1F73A0CF003EAE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2LXK9FK3W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BlockPlayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beepscore.BlockPlayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlockPlay;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +577,15 @@
 			buildConfigurations = (
 				DE6F15071F60DA51003077A0 /* Debug */,
 				DE6F15081F60DA51003077A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEBA0B2B1F73A0CF003EAE5E /* Build configuration list for PBXNativeTarget "BlockPlayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBA0B291F73A0CF003EAE5E /* Debug */,
+				DEBA0B2A1F73A0CF003EAE5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

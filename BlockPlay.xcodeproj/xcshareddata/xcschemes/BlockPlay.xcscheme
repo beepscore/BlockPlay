@@ -39,6 +39,16 @@
                ReferencedContainer = "container:BlockPlay.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DEBA0B211F73A0CF003EAE5E"
+               BuildableName = "BlockPlayUITests.xctest"
+               BlueprintName = "BlockPlayUITests"
+               ReferencedContainer = "container:BlockPlay.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
