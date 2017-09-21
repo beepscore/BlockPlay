@@ -44,6 +44,11 @@ class BlockPlayUITests: XCTestCase {
 
             // navigate to BSOtherVC
             app.navigationBars["BSView"].buttons["Back"].tap()
+
+            // TODO: Consider programmatically simulate low memory warning to free image if it isn't in a retain cycle
+            // Compile error use of unresolved identifier
+            // https://stackoverflow.com/questions/4717138/ios-development-how-can-i-induce-low-memory-warnings-on-device
+            // UIApplication.shared.perform(#selector(_performMemoryWarnin‌​g))
         }
     }
     
