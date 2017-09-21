@@ -31,6 +31,20 @@ class BlockPlayUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        let app = XCUIApplication()
+
+        // navigate back and forth many times, manually watch memory usage.
+        for _ in 0..<100 {
+            // navigate to BSViewController
+            app.buttons["Navigate To Next"].tap()
+
+            // tap gizmos button to run block that captures self
+            app.buttons["gizmos"].tap()
+
+            // navigate to BSOtherVC
+            app.navigationBars["BSView"].buttons["Back"].tap()
+        }
     }
     
 }
