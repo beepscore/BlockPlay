@@ -70,13 +70,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDD-Ix-tZO">
-                                <rect key="frame" x="268" y="164" width="11" height="29"/>
+                                <rect key="frame" x="268" y="256" width="11" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gizmos count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-2a-P4B">
-                                <rect key="frame" x="96" y="164" width="146" height="29"/>
+                                <rect key="frame" x="96" y="256" width="146" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -89,6 +89,12 @@
                                     <action selector="logButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MlY-GB-ioQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gebco_08_rev_bath_3600x1800_color" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-Fo-sC8">
+                                <rect key="frame" x="16" y="64" width="343" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="Wok-4C-eoB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -97,11 +103,14 @@
                             <constraint firstItem="zDD-Ix-tZO" firstAttribute="centerY" secondItem="xUC-2a-P4B" secondAttribute="centerY" id="Eig-jV-itO"/>
                             <constraint firstItem="5st-Gm-VZY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WFj-ik-WTX"/>
                             <constraint firstItem="g5Y-Zf-B8X" firstAttribute="top" secondItem="EY9-9m-YSc" secondAttribute="bottom" constant="40" id="afS-4Q-ozt"/>
-                            <constraint firstItem="xUC-2a-P4B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="bDC-SX-UyJ"/>
+                            <constraint firstItem="xUC-2a-P4B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="192" id="bDC-SX-UyJ"/>
                             <constraint firstAttribute="trailing" secondItem="zDD-Ix-tZO" secondAttribute="trailing" constant="96" id="gue-2Y-kv0"/>
+                            <constraint firstItem="Uh6-Fo-sC8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hKU-J9-5EG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g5Y-Zf-B8X" secondAttribute="bottom" constant="100" id="qJF-aP-eI1"/>
                             <constraint firstItem="EY9-9m-YSc" firstAttribute="centerX" secondItem="g5Y-Zf-B8X" secondAttribute="centerX" id="qfY-c5-hsw"/>
                             <constraint firstItem="EY9-9m-YSc" firstAttribute="top" secondItem="5st-Gm-VZY" secondAttribute="bottom" constant="40" id="sl4-4j-yt5"/>
+                            <constraint firstItem="Uh6-Fo-sC8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="w69-f3-Sgn"/>
+                            <constraint firstItem="Uh6-Fo-sC8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xIU-1k-u4k"/>
                             <constraint firstItem="zDD-Ix-tZO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xUC-2a-P4B" secondAttribute="trailing" constant="8" symbolic="YES" id="ycy-Zi-3Bo"/>
                         </constraints>
                     </view>
@@ -132,4 +141,7 @@
             <point key="canvasLocation" x="-1252" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gebco_08_rev_bath_3600x1800_color" width="3600" height="1800"/>
+    </resources>
 </document>
