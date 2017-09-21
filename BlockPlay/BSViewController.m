@@ -49,6 +49,42 @@
     }];
 }
 
+/**
+ * Questioner: what will be logged, in what order?
+ * My answer
+ * 1,
+ * I know dispatch_sync can be risky.
+ * dispatch_sync will block until it executes, so 2 will be followed by 3.
+ * 4 will come after 3
+ * 2 possible orders?
+ * 1,2,3,4,5 or 1,5,2,3,4
+ *
+ * Questioner: Nope.
+ * Execution deadlocks on dispatch_sync.
+ *
+ * can see this in Xcode, tap logButton, app stops with message:
+ * Thread 5: EXC_BAD_INSTRUCTION(code=EXC_I386_INVOP,subcode=0x0)
+ * call stack Thread 5 0_dispatch_sync_wait detail shows
+ * "BUG IN CLIENT OF LIBDISPATCH: dispatch_sync called on queue already owned by current thread"
+ *
+ @param sender object that called the method
+ */
+- (IBAction)logButtonTapped:(id)sender {
+
+    // serial queue, items will be started in the order they were added, but can finish in any order
+    dispatch_queue_t q = dispatch_queue_create("queue", DISPATCH_QUEUE_SERIAL);
+
+    NSLog(@"1");
+    dispatch_async(q, ^{
+            NSLog(@"2");
+            dispatch_sync(q, ^{
+                    NSLog(@"3");
+                    });
+            NSLog(@"4");
+            });
+    NSLog(@"5");
+}
+
 - (IBAction)gizmosButtonTapped:(id)sender {
 
     // Discussion

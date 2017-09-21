@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5st-Gm-VZY">
-                                <rect key="frame" x="169.5" y="445" width="35" height="41"/>
+                                <rect key="frame" x="170" y="364" width="34" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="foo"/>
                                 <connections>
@@ -31,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5Y-Zf-B8X">
-                                <rect key="frame" x="149" y="526" width="77" height="41"/>
+                                <rect key="frame" x="150" y="526" width="75" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="gizmos"/>
                                 <connections>
@@ -39,27 +38,38 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDD-Ix-tZO">
-                                <rect key="frame" x="266.5" y="120" width="11" height="29"/>
+                                <rect key="frame" x="261.5" y="120" width="11" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gizmos count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-2a-P4B">
-                                <rect key="frame" x="96" y="120" width="150.5" height="29"/>
+                                <rect key="frame" x="96" y="120" width="145.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EY9-9m-YSc">
+                                <rect key="frame" x="171" y="445" width="32" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="log"/>
+                                <connections>
+                                    <action selector="logButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MlY-GB-ioQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zDD-Ix-tZO" firstAttribute="leading" secondItem="xUC-2a-P4B" secondAttribute="trailing" constant="20" id="4OI-7A-Ww1"/>
-                            <constraint firstItem="zDD-Ix-tZO" firstAttribute="centerY" secondItem="xUC-2a-P4B" secondAttribute="centerY" id="A9s-Bc-XhP"/>
                             <constraint firstItem="zDD-Ix-tZO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="EQ6-ht-RGl"/>
-                            <constraint firstItem="g5Y-Zf-B8X" firstAttribute="top" secondItem="5st-Gm-VZY" secondAttribute="bottom" constant="40" id="EgL-Jr-fzf"/>
+                            <constraint firstItem="g5Y-Zf-B8X" firstAttribute="top" secondItem="EY9-9m-YSc" secondAttribute="bottom" constant="40" id="Ewz-eW-NnM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g5Y-Zf-B8X" secondAttribute="bottom" constant="100" id="FKD-fF-How"/>
+                            <constraint firstItem="zDD-Ix-tZO" firstAttribute="centerY" secondItem="xUC-2a-P4B" secondAttribute="centerY" id="GcN-FM-Zsd"/>
                             <constraint firstItem="g5Y-Zf-B8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HU9-3A-i1E"/>
-                            <constraint firstItem="xUC-2a-P4B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="sl5-d4-SyZ"/>
+                            <constraint firstItem="xUC-2a-P4B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="KzS-cU-l04"/>
+                            <constraint firstItem="EY9-9m-YSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZtH-bo-kya"/>
+                            <constraint firstItem="zDD-Ix-tZO" firstAttribute="leading" secondItem="xUC-2a-P4B" secondAttribute="trailing" constant="20" id="hlK-Pn-hK6"/>
+                            <constraint firstItem="5st-Gm-VZY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p3L-4J-zub"/>
+                            <constraint firstItem="EY9-9m-YSc" firstAttribute="top" secondItem="5st-Gm-VZY" secondAttribute="bottom" constant="40" id="ycF-24-NUE"/>
                             <constraint firstItem="5st-Gm-VZY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zbk-oe-chN"/>
                         </constraints>
                     </view>
