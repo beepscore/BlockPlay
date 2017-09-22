@@ -16,6 +16,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.gizmoManager = [BSGizmoManager sharedInstance];
+
+    // attempt to purposely create a retain cycle
+    self.gizmoManager.gizmosBlock = ^(NSArray *gizmos) {
+        // Xcode warns capturing self strongly in this block is likely to lead to a retain cycle
+        NSLog(@"self %@", self);
+    };
 }
 
 - (void)didReceiveMemoryWarning {

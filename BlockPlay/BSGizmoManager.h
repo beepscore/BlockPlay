@@ -19,6 +19,9 @@ typedef void (^BSGizmosBlock)(NSArray *);
 // instead use elements of type NSString
 @property NSArray *gizmos;
 
+// will be used to purposely create a retain cycle
+@property (nonatomic, strong) BSGizmosBlock gizmosBlock;
+
 + (BSGizmoManager *)sharedInstance;
 
 /**
