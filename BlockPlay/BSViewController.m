@@ -16,6 +16,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.gizmoManager = [BSGizmoManager sharedInstance];
+    
+    // purposely create a retain cycle
+    [BSGizmoManager sharedInstance].bsViewController = self;
 }
 
 - (void)didReceiveMemoryWarning {

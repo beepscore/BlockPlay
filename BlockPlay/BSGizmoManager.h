@@ -7,6 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+// avoid circular import
+// https://stackoverflow.com/questions/30499160/unknown-type-name-for-uiviewcontroller-class#30506103
+//#import "BSViewController.h"
+//#import "BSViewController_Tests.h"
+@class BSViewController;
 
 @interface BSGizmoManager : NSObject
 
@@ -18,6 +25,10 @@ typedef void (^BSGizmosBlock)(NSArray *);
 // for simple prototype, don't create a Gizmo class for array elements.
 // instead use elements of type NSString
 @property NSArray *gizmos;
+
+// will be used to purposely create a retain cycle
+@property (nonatomic, strong) BSViewController *bsViewController;
+
 
 + (BSGizmoManager *)sharedInstance;
 
